@@ -1,8 +1,8 @@
 ##built by TurtleWu55
-library(tidyverse)
-library(DT)
-library(cowplot)
-library(leaflet)
+require(tidyverse)
+require(DT)
+require(cowplot)
+require(leaflet)
 
 distance_data <- read_csv("new_distance_data.csv")
 ori_list <- distance_data %>% select(origin) %>% unlist() %>% unique()
