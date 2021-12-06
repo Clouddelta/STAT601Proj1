@@ -1,9 +1,12 @@
 ##built by TurtleWu55
-require(tidyverse)
-require(DT)
-require(cowplot)
-require(leaflet)
-
+if(!require('tidyverse',character.only = TRUE)) install.packages('tidyverse')
+if(!require('DT',character.only = TRUE)) install.packages('DT')
+if(!require('cowplot',character.only = TRUE)) install.packages('cowplot')
+if(!require('leaflet',character.only = TRUE)) install.packages('leaflet')
+library(tidyverse)
+library(DT)
+library(cowplot)
+library(leaflet)
 distance_data <- read_csv("new_distance_data.csv")
 ori_list <- distance_data %>% select(origin) %>% unlist() %>% unique()
 dest_list <- distance_data %>% select(dest) %>% unlist() %>% unique()
